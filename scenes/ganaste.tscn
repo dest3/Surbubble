@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://qs2nf17r25vi"]
+
+[ext_resource type="Script" path="res://scripts/ganaste.gd" id="1_32mc8"]
+[ext_resource type="Texture2D" uid="uid://v80vmhqds4in" path="res://assets/menu principal - surbubble/Normal Button.png" id="1_p2oye"]
+[ext_resource type="Texture2D" uid="uid://cxx583i07h8mc" path="res://assets/menu principal - surbubble/Clic Button.png" id="2_67ei1"]
+[ext_resource type="Texture2D" uid="uid://krp51iovgkr8" path="res://assets/menu principal - surbubble/Hover Button.png" id="3_aipdu"]
+
+[node name="ganaste" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_32mc8")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_p2oye")
+texture_pressed = ExtResource("2_67ei1")
+texture_hover = ExtResource("3_aipdu")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
