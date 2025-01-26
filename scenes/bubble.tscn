@@ -1,10 +1,11 @@
-[gd_scene load_steps=101 format=3 uid="uid://c7cvveq5i32nt"]
+[gd_scene load_steps=102 format=3 uid="uid://c7cvveq5i32nt"]
 
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="1_wrf3r"]
 [ext_resource type="Texture2D" uid="uid://br0ftsg7djifn" path="res://assets/IddleFeliz.png" id="1_yv2pe"]
 [ext_resource type="Texture2D" uid="uid://tkmsd6rea7q" path="res://assets/AnimMuerte.png" id="2_o72tt"]
 [ext_resource type="Texture2D" uid="uid://byjsuova0uwi8" path="res://assets/IddleTriste.png" id="3_bxx05"]
 [ext_resource type="Texture2D" uid="uid://dxsbgwqj6ejy0" path="res://assets/TransicionFelizTriste.png" id="4_uxid3"]
+[ext_resource type="Texture2D" uid="uid://3ar3vobbjrbv" path="res://assets/assets/animados/blur.png" id="6_mvqqt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2nip"]
 atlas = ExtResource("1_yv2pe")
@@ -702,6 +703,11 @@ debug_color = Color(0.781647, 0.330308, 0.725859, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.4, 0.4)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+position = Vector2(14.2222, 7.99997)
+scale = Vector2(2.52593, 2.52593)
+texture = ExtResource("6_mvqqt")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

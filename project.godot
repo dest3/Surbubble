@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 SoundFx="*res://scenes/sound_fx.tscn"
-SceneTransition="*res://scene_transition.gd"
 
 [display]
 
@@ -28,10 +27,6 @@ window/size/viewport_height=1080
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/softbody2d/plugin.cfg")
-
-[global_group]
-
-enemy="cualquier objeto dentro de este grupo explota la burbuja "
 
 [input]
 
