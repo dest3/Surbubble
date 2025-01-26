@@ -703,6 +703,8 @@ debug_color = Color(0.781647, 0.330308, 0.725859, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.4, 0.4)
+limit_top = -3762
+limit_bottom = 1618
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
 position = Vector2(14.2222, 7.99997)
