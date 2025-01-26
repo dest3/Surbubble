@@ -8655,22 +8655,13 @@ scale = Vector2(4.34666, 4.34666)
 texture = ExtResource("4_qhaip")
 flip_h = true
 
-[node name="calesita2" type="AnimatedSprite2D" parent="."]
-position = Vector2(7896, -765)
-scale = Vector2(20.1085, 20.1085)
-sprite_frames = SubResource("SpriteFrames_vi83d")
-animation = &"anim"
-autoplay = "anim"
-frame_progress = 0.937247
+[node name="arbol3" type="Sprite2D" parent="."]
+position = Vector2(-617, -335)
+scale = Vector2(17.8223, 17.8223)
+texture = ExtResource("15_btafr")
 
 [node name="Bubble" parent="." instance=ExtResource("12_e2nhp")]
-position = Vector2(1019, 496)
-scale = Vector2(0.240969, 0.240969)
-
-[node name="Mujer verde" type="Sprite2D" parent="."]
-position = Vector2(4039, 1531)
-scale = Vector2(8.32591, 8.32591)
-texture = ExtResource("11_xjpdf")
+position = Vector2(9531, 636)
 
 [node name="arbol2" type="Sprite2D" parent="."]
 position = Vector2(12736, -53)
@@ -8682,12 +8673,20 @@ position = Vector2(15611, 80)
 scale = Vector2(17.8223, 17.8223)
 texture = ExtResource("15_btafr")
 
-[node name="arbol3" type="Sprite2D" parent="."]
-position = Vector2(-617, -335)
-scale = Vector2(17.8223, 17.8223)
-texture = ExtResource("15_btafr")
+[node name="calesita2" type="AnimatedSprite2D" parent="."]
+position = Vector2(7896, -765)
+scale = Vector2(20.1085, 20.1085)
+sprite_frames = SubResource("SpriteFrames_vi83d")
+animation = &"anim"
+autoplay = "anim"
+frame_progress = 0.937247
 
 [node name="arbol4" type="Sprite2D" parent="."]
 position = Vector2(5113, -292)
 scale = Vector2(17.8223, 17.8223)
 texture = ExtResource("15_btafr")
+
+[node name="Mujer verde" type="Sprite2D" parent="."]
+position = Vector2(4039, 1531)
+scale = Vector2(8.32591, 8.32591)
+texture = ExtResource("11_xjpdf")
