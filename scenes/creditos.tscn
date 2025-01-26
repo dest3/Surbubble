@@ -1,0 +1,68 @@
+[gd_scene load_steps=9 format=3 uid="uid://cvtd03af05xi5"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_agebq"]
+[ext_resource type="Texture2D" uid="uid://b8j53w1x61f88" path="res://assets/creditos/creditos 1 con fondo blanco-01.png" id="2_yi5bk"]
+[ext_resource type="Texture2D" uid="uid://nxxavu0b4wc7" path="res://assets/creditos/creditos 2 con fondo blanco-02.png" id="3_yiq11"]
+[ext_resource type="Texture2D" uid="uid://buginfnrxl456" path="res://assets/creditos/creditos 3 con fondo blanco-03.png" id="4_i8iet"]
+[ext_resource type="Texture2D" uid="uid://cvg85vwlddkwj" path="res://assets/creditos/creditos 4 con fondo blanco-04.png" id="5_80irv"]
+
+[sub_resource type="Animation" id="Animation_1yxog"]
+resource_name = "creditos"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.03333, 2.06667, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_yi5bk"), ExtResource("3_yiq11"), ExtResource("4_i8iet"), ExtResource("5_80irv")]
+}
+
+[sub_resource type="Animation" id="Animation_pr3k0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_yi5bk")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tfga4"]
+_data = {
+"RESET": SubResource("Animation_pr3k0"),
+"creditos": SubResource("Animation_1yxog")
+}
+
+[node name="creditos" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_agebq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tfga4")
+}
+autoplay = "creditos"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_yi5bk")
