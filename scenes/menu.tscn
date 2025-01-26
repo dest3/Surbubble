@@ -67,32 +67,6 @@ grow_vertical = 2
 theme = ExtResource("6_42cot")
 text = "play"
 
-[node name="Opciones" type="TextureButton" parent="VBoxContainer" groups=["enemy"]]
-layout_mode = 2
-texture_normal = ExtResource("3_ldwp3")
-texture_pressed = ExtResource("4_qrhvt")
-texture_hover = ExtResource("5_tufy7")
-stretch_mode = 3
-
-[node name="Label" type="Label" parent="VBoxContainer/Opciones"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("6_42cot")
-text = "options
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Salir" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
 texture_normal = ExtResource("3_ldwp3")
@@ -123,5 +97,4 @@ vertical_alignment = 1
 layout_mode = 2
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
 [connection signal="pressed" from="VBoxContainer/Salir" to="." method="_on_salir_pressed"]
