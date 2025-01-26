@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbfxggb5w7n71"]
+[gd_scene load_steps=7 format=3 uid="uid://dbfxggb5w7n71"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_x6iio"]
 [ext_resource type="Texture2D" uid="uid://qsunfuqvhop4" path="res://assets/menu principal - surbubble/Titulo principal - juego.png" id="3_4nlp4"]
 [ext_resource type="Texture2D" uid="uid://v80vmhqds4in" path="res://assets/menu principal - surbubble/Normal Button.png" id="3_ldwp3"]
 [ext_resource type="Texture2D" uid="uid://cxx583i07h8mc" path="res://assets/menu principal - surbubble/Clic Button.png" id="4_qrhvt"]
 [ext_resource type="Texture2D" uid="uid://krp51iovgkr8" path="res://assets/menu principal - surbubble/Hover Button.png" id="5_tufy7"]
+[ext_resource type="Theme" uid="uid://cmppj6cqp27cp" path="res://recursos/fuente.tres" id="6_42cot"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -38,7 +39,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 29
 
-[node name="Label" type="TextureRect" parent="VBoxContainer"]
+[node name="title" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("3_4nlp4")
 
@@ -49,12 +50,47 @@ texture_pressed = ExtResource("4_qrhvt")
 texture_hover = ExtResource("5_tufy7")
 stretch_mode = 5
 
-[node name="Opciones" type="TextureButton" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="VBoxContainer/Play"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_42cot")
+text = "play"
+
+[node name="Opciones" type="TextureButton" parent="VBoxContainer" groups=["enemy"]]
 layout_mode = 2
 texture_normal = ExtResource("3_ldwp3")
 texture_pressed = ExtResource("4_qrhvt")
 texture_hover = ExtResource("5_tufy7")
 stretch_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Opciones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_42cot")
+text = "options
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Salir" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
@@ -62,6 +98,25 @@ texture_normal = ExtResource("3_ldwp3")
 texture_pressed = ExtResource("4_qrhvt")
 texture_hover = ExtResource("5_tufy7")
 stretch_mode = 3
+
+[node name="Label" type="Label" parent="VBoxContainer/Salir"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("6_42cot")
+text = "salir
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]
