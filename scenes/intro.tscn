@@ -1,0 +1,206 @@
+[gd_scene load_steps=16 format=3 uid="uid://h6rl38kyghj3"]
+
+[ext_resource type="Script" path="res://scenes/intro.gd" id="1_bquf2"]
+[ext_resource type="Texture2D" uid="uid://coq8c1pqq34sq" path="res://assets/biñetas/viñeta1 con filtro-02.png" id="1_ty10n"]
+[ext_resource type="Texture2D" uid="uid://cteg7idiccsni" path="res://assets/biñetas/viñeta 2 con filtrop-02.png" id="2_utj0a"]
+[ext_resource type="Texture2D" uid="uid://breui18doudur" path="res://assets/biñetas/vieñta 3 filtro-02.png" id="3_ks0s6"]
+[ext_resource type="Texture2D" uid="uid://bjkfp2lcxno3t" path="res://assets/biñetas/viñeta 4 filtro-03.png" id="4_4smht"]
+[ext_resource type="Texture2D" uid="uid://dtc28kjsrt4uo" path="res://assets/biñetas/viñeta 5 con filtro-02.png" id="5_oxi3e"]
+[ext_resource type="Texture2D" uid="uid://dkupx1nst5w8x" path="res://assets/biñetas/viñeta 6 con filtro-02.png" id="6_jipkn"]
+[ext_resource type="Texture2D" uid="uid://cqj7ywagde3kf" path="res://assets/biñetas/viñeta abierta con filtro-02.png" id="7_shi15"]
+[ext_resource type="AudioStream" uid="uid://do8jvsjio0hcf" path="res://Sonidos/ambientes/Ambiente carrusel.wav" id="8_ie6ju"]
+[ext_resource type="Texture2D" uid="uid://ndflil8yf1yo" path="res://assets/viñeta abierta recortada con filtro-04.png" id="8_xogs7"]
+[ext_resource type="AudioStream" uid="uid://ki1y6824q6yl" path="res://Sonidos/ambientes/Ambiente parque.wav" id="9_kv11x"]
+[ext_resource type="AudioStream" uid="uid://fba1x24xpjum" path="res://Sonidos/ambientes/Ambiente niños jugando a la pelota.wav" id="10_acm78"]
+
+[sub_resource type="Animation" id="Animation_hipsy"]
+resource_name = "INTRO"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 1.43333, 2.96667, 4.53333, 5.93333, 7.5, 9, 9.03333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_4smht"), ExtResource("1_ty10n"), ExtResource("2_utj0a"), ExtResource("3_ks0s6"), ExtResource("5_oxi3e"), ExtResource("6_jipkn"), ExtResource("7_shi15"), ExtResource("8_xogs7")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ambiente_carrusel:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_ie6ju")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ambiente_parque:stream")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_kv11x")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ambiente_parque:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0666667, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ambiente_carrusel:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.43333, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ambiente_niñxs:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.93333, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_jrcfr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ty10n")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ambiente_carrusel:stream")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("8_ie6ju")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ambiente_parque:stream")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_kv11x")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ambiente_parque:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ambiente_carrusel:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ambiente_niñxs:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wah88"]
+_data = {
+"INTRO": SubResource("Animation_hipsy"),
+"RESET": SubResource("Animation_jrcfr")
+}
+
+[node name="intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bquf2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ty10n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wah88")
+}
+autoplay = "INTRO"
+
+[node name="ambiente_carrusel" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ie6ju")
+
+[node name="ambiente_parque" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_kv11x")
+
+[node name="ambiente_niñxs" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_acm78")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

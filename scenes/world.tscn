@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfg8qwdqewi7n"]
+
+[ext_resource type="Texture2D" uid="uid://dh2s0in04slcj" path="res://icon.svg" id="1_oit6o"]
+[ext_resource type="PackedScene" uid="uid://c7cvveq5i32nt" path="res://scenes/bubble.tscn" id="2_8kdiu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65dsp"]
+size = Vector2(572, 20)
+
+[node name="world" type="Node2D"]
+position = Vector2(-18, 562)
+scale = Vector2(1.9525, 2.26197)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["enemy"]]
+position = Vector2(-230.985, 124.228)
+scale = Vector2(1.30822, 1.96266)
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(276.5, -0.5)
+scale = Vector2(4.39844, 0.132813)
+texture = ExtResource("1_oit6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(276, 0)
+shape = SubResource("RectangleShape2D_65dsp")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." groups=["enemy"]]
+position = Vector2(606.401, 338.643)
+scale = Vector2(2.07611, 1.30961)
+metadata/_edit_group_ = true
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(276.5, -0.5)
+scale = Vector2(4.39844, 0.132813)
+texture = ExtResource("1_oit6o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(276, 0)
+shape = SubResource("RectangleShape2D_65dsp")
+
+[node name="Bubble" parent="." instance=ExtResource("2_8kdiu")]
+position = Vector2(150.064, -1699.41)
