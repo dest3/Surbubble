@@ -1,4 +1,4 @@
-[gd_scene load_steps=289 format=4 uid="uid://ddtep88rg7jdq"]
+[gd_scene load_steps=291 format=4 uid="uid://ddtep88rg7jdq"]
 
 [ext_resource type="Texture2D" uid="uid://c24kkmwj1w5n7" path="res://assets/assets/cielo.png" id="1_gw6ju"]
 [ext_resource type="Texture2D" uid="uid://huwf31diyjli" path="res://assets/assets/grass.png" id="1_t5hji"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ddd4xnhvkrlj2" path="res://assets/assets/animados/RosaAnim.png" id="9_xtvy6"]
 [ext_resource type="Texture2D" uid="uid://b6eb748bgmw68" path="res://assets/assets/render mujer verde 1 D04.png" id="11_xjpdf"]
 [ext_resource type="PackedScene" uid="uid://c7cvveq5i32nt" path="res://scenes/bubble.tscn" id="12_e2nhp"]
+[ext_resource type="PackedScene" uid="uid://bohwtkhgb3m3y" path="res://scenes/meta.tscn" id="14_pkfmm"]
 [ext_resource type="Texture2D" uid="uid://c0i372ib4uv0p" path="res://assets/assets/arbolg04oscuro.png" id="15_btafr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0n48c"]
@@ -8549,6 +8550,9 @@ texture = ExtResource("4_me4pv")
 [sub_resource type="TileSet" id="TileSet_ecaqa"]
 sources/0 = SubResource("TileSetAtlasSource_bt5no")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2w1i"]
+size = Vector2(402.725, 20)
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(-2, -10)
 metadata/_edit_vertical_guides_ = [2028.0]
@@ -8660,8 +8664,12 @@ position = Vector2(-617, -335)
 scale = Vector2(17.8223, 17.8223)
 texture = ExtResource("15_btafr")
 
+[node name="meta" parent="." instance=ExtResource("14_pkfmm")]
+position = Vector2(14124, 347)
+scale = Vector2(-1.08035, -4.81162)
+
 [node name="Bubble" parent="." instance=ExtResource("12_e2nhp")]
-position = Vector2(9531, 636)
+position = Vector2(1045, 367)
 
 [node name="arbol2" type="Sprite2D" parent="."]
 position = Vector2(12736, -53)
@@ -8685,6 +8693,14 @@ frame_progress = 0.937247
 position = Vector2(5113, -292)
 scale = Vector2(17.8223, 17.8223)
 texture = ExtResource("15_btafr")
+
+[node name="Area2D" type="Area2D" parent="." groups=["enemy"]]
+position = Vector2(216, 263)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["enemigos", "enemy", "enemys"]]
+position = Vector2(5587, 1178)
+scale = Vector2(41.4278, -46.5633)
+shape = SubResource("RectangleShape2D_m2w1i")
 
 [node name="Mujer verde" type="Sprite2D" parent="."]
 position = Vector2(4039, 1531)
