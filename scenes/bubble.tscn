@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://hx3ahkls5v1p"]
+[gd_scene load_steps=101 format=3 uid="uid://c7cvveq5i32nt"]
 
 [ext_resource type="Script" path="res://scripts/bubble.gd" id="1_wrf3r"]
 [ext_resource type="Texture2D" uid="uid://br0ftsg7djifn" path="res://assets/IddleFeliz.png" id="1_yv2pe"]
