@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bitbfp0foes15"
+path="res://.godot/imported/Sopla y sale la burbuja 2.wav-ea75cef35e9cb1e65a1f9df5fcc7c69f.sample"
+
+[deps]
+
+source_file="res://Sonidos/SFx/Sopla y sale la burbuja 2.wav"
+dest_files=["res://.godot/imported/Sopla y sale la burbuja 2.wav-ea75cef35e9cb1e65a1f9df5fcc7c69f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
