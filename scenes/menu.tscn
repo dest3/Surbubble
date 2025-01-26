@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbfxggb5w7n71"]
+[gd_scene load_steps=6 format=3 uid="uid://dbfxggb5w7n71"]
 
-[ext_resource type="Texture2D" uid="uid://cd0goam2vvsji" path="res://assets/templatejpg.jpg" id="1_c6jhb"]
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_x6iio"]
+[ext_resource type="Texture2D" uid="uid://qsunfuqvhop4" path="res://assets/menu principal - surbubble/Titulo principal - juego.png" id="3_4nlp4"]
+[ext_resource type="Texture2D" uid="uid://v80vmhqds4in" path="res://assets/menu principal - surbubble/Normal Button.png" id="3_ldwp3"]
+[ext_resource type="Texture2D" uid="uid://cxx583i07h8mc" path="res://assets/menu principal - surbubble/Clic Button.png" id="4_qrhvt"]
+[ext_resource type="Texture2D" uid="uid://krp51iovgkr8" path="res://assets/menu principal - surbubble/Hover Button.png" id="5_tufy7"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -19,7 +22,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_c6jhb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -36,27 +38,30 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 29
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 225
-text = "SURBUBBLE"
+texture = ExtResource("3_4nlp4")
 
-[node name="Play" type="Button" parent="VBoxContainer"]
+[node name="Play" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Nueva Historia
-"
+texture_normal = ExtResource("3_ldwp3")
+texture_pressed = ExtResource("4_qrhvt")
+texture_hover = ExtResource("5_tufy7")
+stretch_mode = 5
 
-[node name="Opciones" type="Button" parent="VBoxContainer"]
+[node name="Opciones" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "opciones"
+texture_normal = ExtResource("3_ldwp3")
+texture_pressed = ExtResource("4_qrhvt")
+texture_hover = ExtResource("5_tufy7")
+stretch_mode = 3
 
-[node name="Salir" type="Button" parent="VBoxContainer"]
+[node name="Salir" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "salir
-"
+texture_normal = ExtResource("3_ldwp3")
+texture_pressed = ExtResource("4_qrhvt")
+texture_hover = ExtResource("5_tufy7")
+stretch_mode = 3
 
 [connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Opciones" to="." method="_on_opciones_pressed"]

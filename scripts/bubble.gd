@@ -5,11 +5,28 @@ extends RigidBody2D
 # Magnitud del impulso
 @export var impulse_strength: float = 500.0
 
+# Para rastrear si el jugador ya hizo clic
+var has_clicked: bool = false
+
 # Para evitar cambios innecesarios de animación
 var is_near_object: bool = false
 
+# Controla si la transición debe continuar con "idle_feliz"
+var transitioning_to_happy: bool = false
+
+func _ready():
+	# Configura la animación inicial (idle_triste o similar)
+	animated_sprite_2d.play("idle_triste")
+
 func _input(event):
 	if event is InputEventMouseButton and event.is_pressed():
+		# Si es el primer clic, reproduce la transición de triste a feliz
+		if not has_clicked:
+			has_clicked = true
+			transitioning_to_happy = true
+			animated_sprite_2d.speed_scale = 1.0  # Reproducción normal
+			animated_sprite_2d.play("trans_feliz_triste")
+
 		# Obtiene la dirección desde la posición del mouse
 		var mouse_position = get_global_mouse_position()
 		var direction = (mouse_position - global_position).normalized()
@@ -35,7 +52,10 @@ func _on_fear_body_exited(body: Node2D) -> void:
 
 # Llamado cuando termina cualquier animación
 func _on_animated_sprite_2d_animation_finished() -> void:
-	if is_near_object:
+	if transitioning_to_happy:
+		transitioning_to_happy = false
+		animated_sprite_2d.play("idle_feliz")
+	elif is_near_object:
 		animated_sprite_2d.speed_scale = 1.0  # Aseguramos velocidad normal
 		animated_sprite_2d.play("idle_triste")
 	else:
